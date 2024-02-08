@@ -11,8 +11,8 @@ class RedundantFilterRetriever(BaseRetriever):
         emb = self.embeddings.embed_query(query)
 
         # take embeddings and feed them to
-        # max_margin_relevance_search_by_vector
-        return self.chroma.max_margin_relevance_search_by_vector(embeddings=emb, lambda_mult=0.8)
+        # max_marginal_relevance_search_by_vector
+        return self.chroma.max_marginal_relevance_search_by_vector(embedding=emb, lambda_mult=0.8)
         return []
 
 
